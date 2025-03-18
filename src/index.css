@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+  background-image: url("/images/velki-desktop-bg.webp");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Remove spinners in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove spinners in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+div {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Custom navigation container styles */
+.custom-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+/* Custom navigation arrow buttons */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 700;
+  pointer-events: all;
+  padding: 10px;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.swiper-button-prev-custom {
+  left: 10px;
+}
+
+.swiper-button-next-custom {
+  right: 10px;
+}
+
+/* Ensure Swiper container is sized correctly */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scrolling-text {
+  animation: scroll 25s linear infinite;
+  /* Adjust '10s' to make the scrolling faster or slower */
+}
+
+.icon-game-hall-sports::before {
+  content: "";
+}
+
+.item-block {
+  font-size: 1.0714285714285714rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+.item-block .item:first-child {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.item-block .item {
+  align-items: center;
+  border-bottom-width: 1px;
+  display: flex;
+  height: 3.2142857142857144rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(212 224 229 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.item-block .item {
+  align-items: center;
+  border-bottom-width: 1px;
+  display: flex;
+  height: 3.2142857142857144rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(212 224 229 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.item-block .item .icon {
+  font-size: 1.1428571428571428rem;
+  margin-right: 0.5rem;
+}
+
+[class*=" icon-"],
+[class^="icon-"] {
+  font-family: icomoon !important;
+  speak: never;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.item-block .item .icon-right {
+  position: absolute;
+  right: 2rem;
+  --tw-rotate: 180deg;
+  font-size: 0.8571428571428571rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-text-opacity: 1;
+  color: rgb(126 145 158 / var(--tw-text-opacity));
+}
+
+.tab-indicator {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 62px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-size: 100%;
+  font-variation-settings: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
